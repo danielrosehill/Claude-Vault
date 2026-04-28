@@ -1,0 +1,51 @@
+{
+  "plugins": [
+    {
+      "name": "podcast-production",
+      "marketplace": "danielrosehill",
+      "description": "Tools for podcast editing and publishing",
+      "tags": ["podcast", "audio"]
+    },
+    {
+      "name": "schedule-manager",
+      "marketplace": "danielrosehill",
+      "description": "Calendar + Todoist orchestration",
+      "tags": ["productivity"]
+    }
+  ],
+  "mcpServers": [
+    {
+      "name": "greeninvoice",
+      "description": "Israeli invoicing API",
+      "config": {
+        "command": "npx",
+        "args": ["-y", "@greeninvoice/mcp-server"],
+        "env": { "GREENINVOICE_API_KEY": "${GREENINVOICE_API_KEY}" }
+      },
+      "tags": ["finance", "israel"]
+    },
+    {
+      "name": "context7",
+      "description": "Library documentation lookup",
+      "config": {
+        "command": "npx",
+        "args": ["-y", "@upstash/context7-mcp"]
+      },
+      "tags": ["docs", "always-on"]
+    }
+  ],
+  "bundles": [
+    {
+      "name": "podcast",
+      "description": "Full podcast production stack",
+      "plugins": ["podcast-production"],
+      "mcpServers": ["context7"]
+    },
+    {
+      "name": "invoicing",
+      "description": "Israeli small-business invoicing",
+      "plugins": [],
+      "mcpServers": ["greeninvoice"]
+    }
+  ]
+}
