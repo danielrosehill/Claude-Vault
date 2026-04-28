@@ -13,7 +13,7 @@ The user names an MCP server (e.g. "mount the greeninvoice MCP"). If ambiguous, 
 
 ## Steps
 
-1. Read `~/.claude/vault/inventory.json`. Find the MCP entry under `mcpServers` by name. If not found, tell the user and stop.
+1. Resolve the inventory path per `skills/_shared/inventory-path.md` and read it. Find the MCP entry under `mcpServers` by name. If not found, tell the user and stop.
 2. The inventory entry's `config` object is the canonical server spec (`command`, `args`, `env`, etc.).
 3. Determine project root (cwd or nearest `.git`/`.claude` ancestor).
 4. Read `<project>/.mcp.json`. If it doesn't exist, start with `{ "mcpServers": {} }`.

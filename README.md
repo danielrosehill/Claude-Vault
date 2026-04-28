@@ -18,7 +18,13 @@ claude plugin install Claude-Vault
 
 (Or clone and add via your local marketplace.)
 
-Then create the vault inventory at `~/.claude/vault/inventory.json` — see [Vault inventory format](#vault-inventory-format) below.
+Then create the vault inventory file (see [Vault inventory format](#vault-inventory-format) below). Resolve the path as:
+
+- `$CLAUDE_USER_DATA/claude-vault/inventory.json` if `CLAUDE_USER_DATA` is set
+- else `$XDG_DATA_HOME/claude-plugins/claude-vault/inventory.json` if `XDG_DATA_HOME` is set
+- else `~/.local/share/claude-plugins/claude-vault/inventory.json`
+
+(Plugin data must **not** live under `~/.claude/` — that's Claude Code's own config surface and gets clobbered on plugin updates.)
 
 ## Skills
 
@@ -35,7 +41,7 @@ Then create the vault inventory at `~/.claude/vault/inventory.json` — see [Vau
 
 ## Vault inventory format
 
-`~/.claude/vault/inventory.json`:
+Inventory file (resolved per the path rules above):
 
 ```json
 {

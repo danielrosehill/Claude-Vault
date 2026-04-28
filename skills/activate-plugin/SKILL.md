@@ -13,7 +13,7 @@ The user names a plugin (e.g. "activate the podcast-production plugin"). If ambi
 
 ## Steps
 
-1. Read `~/.claude/vault/inventory.json`. Find the plugin entry by name. If not found, tell the user and stop — suggest `list-vault`.
+1. Resolve the inventory path per `skills/_shared/inventory-path.md` and read it. Find the plugin entry by name. If not found, tell the user and stop — suggest `list-vault`.
 2. Resolve the activation key: `<plugin-name>@<marketplace-name>` from the inventory entry.
 3. Determine project root (cwd or nearest `.git`/`.claude` ancestor).
 4. Read `<project>/.claude/settings.json`. If it doesn't exist, create the directory and start with `{}`.

@@ -14,7 +14,7 @@ Inspect the current project's Claude Code configuration and report what's enable
    - `<project>/.claude/settings.json` — look at `enabledPlugins` (object: `"name@marketplace": true`) and `enabledMcpjsonServers` (array of MCP server names from `.mcp.json`).
    - `<project>/.claude/settings.local.json` — same shape, may override.
    - `<project>/.mcp.json` — `mcpServers` object (name → config).
-3. Cross-reference with `~/.claude/vault/inventory.json` to label each active item as **vault** (in inventory) or **external** (not in inventory).
+3. Resolve the inventory path per `skills/_shared/inventory-path.md` and read it (treat missing as empty). Label each active item as **vault** (present in inventory) or **external** (not in inventory).
 4. Render:
    - **Active plugins** — name, marketplace, source (vault/external)
    - **Active MCP servers** — name, source (vault/external), enabled-state (in `.mcp.json` AND in `enabledMcpjsonServers`, or only in `.mcp.json`)

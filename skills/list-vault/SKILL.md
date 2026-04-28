@@ -9,7 +9,7 @@ Read the vault inventory and present its contents grouped by category.
 
 ## Steps
 
-1. Read `~/.claude/vault/inventory.json`. If it doesn't exist, tell the user to create it (point at the README format) and stop.
+1. Resolve the inventory path per `skills/_shared/inventory-path.md` (the canonical resolver: `$CLAUDE_USER_DATA` → `$XDG_DATA_HOME/claude-plugins` → `~/.local/share/claude-plugins`, then `/claude-vault/inventory.json`). Read it. If it doesn't exist, tell the user the resolved path and point at the README format, then stop. Do **not** fall back to `~/.claude/`.
 2. Parse the JSON. Expected top-level keys: `plugins` (array), `mcpServers` (array), `bundles` (array). Any may be missing — treat as empty.
 3. Render a compact summary:
    - **Plugins** — name, marketplace, description, tags

@@ -7,4 +7,4 @@ description: Save the current project's active plugin and MCP set as a reusable 
 
 **Status: stub.** Not yet implemented.
 
-Intended behaviour: read the current project's `enabledPlugins` and `.mcp.json`, ask the user for a bundle name + description, and append a new entry to `bundles[]` in `~/.claude/vault/inventory.json`. Reject if a bundle with that name already exists unless `--overwrite` is passed.
+Intended behaviour: read the current project's `enabledPlugins` and `.mcp.json`, ask the user for a bundle name + description, and append a new entry to `bundles[]` in the inventory file (path resolved per `skills/_shared/inventory-path.md`). Reject if a bundle with that name already exists unless `--overwrite` is passed.
