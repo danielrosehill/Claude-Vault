@@ -4,13 +4,22 @@
       "name": "podcast-production",
       "marketplace": "danielrosehill",
       "description": "Tools for podcast editing and publishing",
-      "tags": ["podcast", "audio"]
+      "tags": ["podcast", "audio"],
+      "skills": [
+        { "name": "trim-silence", "description": "Trim leading and trailing silence from an audio file" },
+        { "name": "denoise", "description": "Remove background noise from an audio recording" },
+        { "name": "normalize", "description": "Normalize an audio file to a target loudness (LUFS or peak)" }
+      ]
     },
     {
       "name": "schedule-manager",
       "marketplace": "danielrosehill",
       "description": "Calendar + Todoist orchestration",
-      "tags": ["productivity"]
+      "tags": ["productivity"],
+      "skills": [
+        { "name": "morning-brief", "description": "Brief on where you left off — recent calendar, tasks, and unread mail" },
+        { "name": "create-task", "description": "Create a single Todoist task with optional date and priority" }
+      ]
     }
   ],
   "mcpServers": [

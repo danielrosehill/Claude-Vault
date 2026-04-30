@@ -1,6 +1,6 @@
 {
   "name": "claude-vault",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Meta-plugin for per-project activation of dormant plugins and MCP servers from a personal vault. Mitigates user-level eager skill description loading by keeping everything installed-but-dormant and activating only what each project needs.",
   "author": {
     "name": "Daniel Rosehill",
